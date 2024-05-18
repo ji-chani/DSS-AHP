@@ -1,0 +1,5 @@
+numpy
+pandas
+customtkinter
+pillow
+CTkTable
