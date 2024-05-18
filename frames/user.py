@@ -1,6 +1,5 @@
 import customtkinter as ctk
 
-
 # text sizes
 global normal, average, semi_header, header
 normal, average, semi_header, header = 15, 18, 20, 25
