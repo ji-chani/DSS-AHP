@@ -1,5 +1,4 @@
 import customtkinter as ctk
-from tkinter import ttk
 from CTkTable import *
 import numpy as np
 from utils import get_consistency_ratio
@@ -20,7 +19,7 @@ class CriteriaFrame(ctk.CTkFrame):
 
         # initialize pairwise matrix of criteria and update current inconsistencies
         self.pairwise_matrix = np.ones(shape=(4,4))
-        self.update_matrix_from_option_menu()
+        self.update_matrix_from_option_menu(value=None)
 
     def create_instructions_frame(self, **kwargs):
         # create intructions frame
@@ -237,12 +236,12 @@ class CriteriaFrame(ctk.CTkFrame):
         
         # update matrix
         self.update_matrix()
-        # print(self.pairwise_matrix)
 
         # update inconsistency
         self.update_inconsistency()
-        # print(self.consistency_ratio.get())
-        # print(self.inconsistency.get())
+
+        if value is not None:
+            print(f'Criteria preference updated. New inconsistency value is {self.consistency_ratio.get()} which is {self.inconsistency.get()}.')
 
     def update_matrix(self):
         # direct
