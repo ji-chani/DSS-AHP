@@ -17,11 +17,17 @@ pressure = {
 }
 
 # availability
-np.random.seed(21)
-options = [15, 20, 25, 30, 35]
+amat_availability = [[30, 30, 25], [35, 25, 25], [30, 35, 25], [30, 35, 25], [35, 25, 25],
+                     [35, 25, 25], [30, 40, 25], [30, 50, 35], [30, 35, 38], [35, 25, 25],
+                     [35, 25, 25], [35, 25, 25], [30, 35, 25], [30, 35, 25], [35, 25, 25],
+                     [35, 35, 30], [25, 35, 30], [25, 35, 30], [25, 25, 35], [40, 40, 30],
+                     [100, 70, 60]]
+math_availability = [[25 ,35, 30], [25, 35, 30], [25, 25, 35], [40, 40, 30], [40, 40, 30],
+                     [40, 35, 30], [40,40, 30], [40], [80, 80, 80], [60, 60, 45], [100, 70, 60],
+                     [25, 25,  35]]
 availability = {
-    'BS AMAT': np.random.choice(options, size=21),
-    'BS MATH': np.random.choice(options, size=12)
+    'BS AMAT': [np.mean(x) for x in amat_availability],
+    'BS MATH': [np.mean(x) for x in math_availability]
 }
 
 
