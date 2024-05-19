@@ -9,7 +9,7 @@ from subjects import amat_majors_pool, math_majors_pool
 from utils import Hierarchy, Layer
 from utils import availability, difficulty, pressure, get_consistency_ratio, rank_difference
 
-ctk.set_appearance_mode('dark')
+ctk.set_appearance_mode('light')
 ctk.set_default_color_theme('dark-blue')
 
 # text sizes
@@ -53,12 +53,12 @@ class NavigationTab(ctk.CTkFrame):
         self.preference_button.grid(row=4, column=0, sticky="ew")
 
         ## results button
-        self.results_button = ctk.CTkButton(self, text='Results', image=None, **navigation_buttons_kwargs)
+        self.results_button = ctk.CTkButton(self, text='Results', image=master.result_image, **navigation_buttons_kwargs)
         self.results_button.grid(row=5, column=0, sticky='ew')
         
 
         ## list of buttons
-        self.buttons = [self.home_button, self.user_button, self.preference_button, self.criteria_button]
+        self.buttons = [self.home_button, self.user_button, self.preference_button, self.criteria_button, self.results_button]
 
         # appearance mode
         self.appearance_mode_label = ctk.CTkLabel(self,
@@ -250,7 +250,7 @@ class App(ctk.CTk):
         self.home_image = ctk.CTkImage(light_image=Image.open(os.path.join(image_path, 'home_dark.png')),
                                        dark_image=Image.open(os.path.join(image_path, 'home_light.png')),
                                        size=(30,30))
-        self.home_image_light = ctk.CTkImage(Image.open(os.path.join(image_path, 'home_dark.png')),
+        self.home_image_light = ctk.CTkImage(Image.open(os.path.join(image_path, 'home_light.png')),
                                              size=(30,30))
         self.user_image = ctk.CTkImage(light_image=Image.open(os.path.join(image_path, 'user_dark.png')),
                                        dark_image=Image.open(os.path.join(image_path, 'user_light.png')),
@@ -268,7 +268,9 @@ class App(ctk.CTk):
                                        size=(30,30))
         self.back_image = ctk.CTkImage(Image.open(os.path.join(image_path, 'back_light.png')),
                                        size=(30,30))
-
+        self.result_image = ctk.CTkImage(light_image=Image.open(os.path.join(image_path, 'result_dark.png')),
+                                       dark_image=Image.open(os.path.join(image_path, 'result_light.png')),
+                                       size=(30,30))
 
 if __name__ == "__main__":
     app = App()
