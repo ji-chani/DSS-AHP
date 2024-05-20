@@ -38,7 +38,10 @@ such that $a_n=9$ where $n$ is the maximum rank given to the courses. After this
 The graphical user interface (GUI) for the AHP-based DSS has five tabs: Home, User Details, Criteria, User Preference, and Results. The “Home” tab displays details about the DSS. The “User Details” tab includes instructions and relevance of selecting the degree program and academic option (Thesis or SP) and a dropdown selection of the said data. The “Criteria” tab includes instructions for the criteria comparison, the Saaty Scale of Importance, dropdown selection for pairwise comparison of preference of a criterion and level of importance over the other, consistency ratio of the comparison matrix of the criteria, and whether or not the inconsistency is acceptable. The “User Preference” tab asks the user to rank the courses according to the user’s preference, with instructions beside it. Lastly, the “Results” tab shows the weights and corresponding ranks for each course. It also displays the top 3 courses for the SP option or the top 2 courses for the Thesis option for BS Mathematics. For BS Applied Mathematics, this tab will display the top 5 courses for the SP option or the top 4 courses for the Thesis option.
 
 A sample demo of using the GUI is shown below.
-![video][sample_demo.mp4]
+
+https://github.com/ji-chani/DSS-AHP/assets/120572492/158ea1fd-5e80-4bb0-9299-6147ecf9b70e
+
+
 
 
 
