@@ -30,7 +30,7 @@ The course availability was obtained by identifying the class capacity or the ma
 ![image](https://github.com/ji-chani/DSS-AHP/assets/120572492/0e06eaf2-381d-49d5-b494-e2323abcbbeb)
 
 Lastly, since personal preferences are subjective and unique to each student, our AHP-based decision support system will ask users to provide this information. To obtain the data for personal preferences, the user will be required to rank the courses based on their preference. The rankings are not limited to one course per rank; the DSS allows the user to have multiple courses in one rank. To create the comparison matrix, pairwise rank differences between the courses are determined and the comparison value (which we denote by $a_k$ where $k$ is the absolute rank difference) is computed as follows:
-$$a_0 = 1$$;
+$$a_0 = 1$$
 $$a_k = a_{k-1}+ \frac{8}{num of alternatives} - 1$$
 such that $a_n=9$ where $n$ is the maximum rank given to the courses. After this, we proceeded with getting the corresponding matrix containing the normalized vectors and obtaining the weights for personal preferences.
 
