@@ -40,11 +40,3 @@ The graphical user interface (GUI) for the AHP-based DSS has five tabs: Home, Us
 A sample demo of using the GUI is shown below.
 
 https://github.com/ji-chani/DSS-AHP/assets/120572492/158ea1fd-5e80-4bb0-9299-6147ecf9b70e
-
-
-
-
-
-
-
-
